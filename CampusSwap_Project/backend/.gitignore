@@ -1,0 +1,8 @@
+# Database / virtualenv artifacts
+*.db
+*.sqlite3
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc

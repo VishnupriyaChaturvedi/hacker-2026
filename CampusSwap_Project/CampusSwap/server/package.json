@@ -1,0 +1,18 @@
+{
+  "name": "campusswap-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CampusSwap backend - multipage campus marketplace (Express + server-rendered pages + REST API).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed:reset": "node scripts/reset.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

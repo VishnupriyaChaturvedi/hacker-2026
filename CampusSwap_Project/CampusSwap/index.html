@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusSwap — Buy. Sell. Bargain. On Campus.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="CampusSwap home">
+        <span class="brand-mark">CS</span>
+        <span><strong>Campus</strong>Swap</span>
+      </a>
+      <nav>
+        <a href="#browse">Browse</a>
+        <a href="#how">How it works</a>
+        <a href="#trust">Trust</a>
+      </nav>
+      <button class="primary-btn" onclick="openSellModal()">+ Sell something</button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <span class="eyebrow">THE CAMPUS MARKETPLACE</span>
+          <h1>Your campus.<br><span>One smarter bazaar.</span></h1>
+          <p>Stop scrolling through buried WhatsApp messages. Discover student deals, verify who you're buying from, and bargain in one clean place.</p>
+          <div class="hero-actions">
+            <a class="primary-btn big" href="#browse">Explore deals <span>→</span></a>
+            <button class="ghost-btn" onclick="openSellModal()">Post an item</button>
+          </div>
+          <div class="trust-row">
+            <span>✓ Campus-only profiles</span><span>✓ Chat & bargain</span><span>✓ Meet-up friendly</span>
+          </div>
+        </div>
+        <div class="hero-card-wrap">
+          <div class="floating-note note-one">🔥 6 students watching</div>
+          <div class="phone-card">
+            <div class="phone-top"><span>CampusSwap</span><span class="online-dot"></span></div>
+            <div class="mini-search">⌕ Search textbooks, calculators...</div>
+            <div class="mini-item">
+              <div class="mini-img book">BOOK</div><div><b>DSA Made Easy</b><small>₹280 · Like new</small></div><span>♡</span>
+            </div>
+            <div class="mini-item">
+              <div class="mini-img calc">CASIO</div><div><b>FX-991ES Plus</b><small>₹650 · Good</small></div><span>♡</span>
+            </div>
+            <div class="mini-chat"><b>Rahul</b><span>Can you do ₹550?</span><strong>₹600</strong></div>
+            <div class="mini-btn">Make an offer</div>
+          </div>
+          <div class="floating-note note-two">✓ Verified student</div>
+        </div>
+      </section>
+
+      <section class="stats-strip">
+        <div><strong>128</strong><span>active listings</span></div>
+        <div><strong>74</strong><span>campus sellers</span></div>
+        <div><strong>4.8/5</strong><span>seller trust score</span></div>
+        <div><strong>₹42K+</strong><span>saved by students</span></div>
+      </section>
+
+      <section class="section" id="browse">
+        <div class="section-head">
+          <div><span class="eyebrow">FRESH ON CAMPUS</span><h2>Deals students actually want.</h2></div>
+          <div class="filters">
+            <button class="filter active" data-category="All">All</button>
+            <button class="filter" data-category="Books">Books</button>
+            <button class="filter" data-category="Gadgets">Gadgets</button>
+            <button class="filter" data-category="Hostel">Hostel</button>
+            <button class="filter" data-category="Cycles">Cycles</button>
+          </div>
+        </div>
+        <div class="search-row"><div class="search-box">⌕ <input id="searchInput" placeholder="Search campus deals..." /></div><button class="sort-btn" id="sortBtn">Sort: newest ↕</button></div>
+        <div class="listing-grid" id="listingGrid"></div>
+      </section>
+
+      <section class="how-section" id="how">
+        <div class="section-head centered"><span class="eyebrow">NO MORE “IS THIS AVAILABLE?”</span><h2>WhatsApp made the community.<br>CampusSwap fixes the chaos.</h2></div>
+        <div class="steps">
+          <div class="step"><span>01</span><div class="step-icon">✦</div><h3>Post once</h3><p>Seller adds photos, price, condition and a preferred campus meet-up spot.</p></div>
+          <div class="step"><span>02</span><div class="step-icon">⌕</div><h3>Browse clearly</h3><p>Buyers filter real listings instead of hunting through hundreds of group messages.</p></div>
+          <div class="step"><span>03</span><div class="step-icon">↗</div><h3>Bargain in chat</h3><p>Make an offer, counter, accept or decline — with the item and price always visible.</p></div>
+          <div class="step"><span>04</span><div class="step-icon">✓</div><h3>Meet with trust</h3><p>Verified campus profiles, ratings and public meet-up spots reduce the awkwardness.</p></div>
+        </div>
+      </section>
+
+      <section class="trust-section" id="trust">
+        <div class="trust-copy"><span class="eyebrow">DESIGNED FOR TRUST</span><h2>Because a ₹500 deal is not worth a ₹5,000 headache.</h2><p>CampusSwap makes the little trust signals visible before a buyer starts chatting.</p>
+          <div class="trust-list"><div><b>✓</b><span><strong>Verified campus identity</strong><small>Show campus email / student badge status.</small></span></div><div><b>★</b><span><strong>Seller reputation</strong><small>Ratings from completed campus trades.</small></span></div><div><b>⌖</b><span><strong>Safe meet-up spots</strong><small>Library lobby, canteen and security desk.</small></span></div></div>
+        </div>
+        <div class="trust-card"><div class="profile-top"><div class="avatar">AR</div><div><b>Ananya Rao</b><span>Verified · Computer Science</span></div><strong>4.9 ★</strong></div><div class="rating-row"><span>Response time</span><b>Under 10 min</b></div><div class="rating-row"><span>Trades completed</span><b>18</b></div><div class="rating-row"><span>Preferred meet-up</span><b>Main Library</b></div><div class="safe-banner">🛡 Campus verified seller</div></div>
+      </section>
+
+      <section class="owner-section">
+        <div class="owner-card"><span class="eyebrow">THE REAL OWNER</span><h2>Meet Riya — the student behind the WhatsApp chaos.</h2><p>Riya runs a tiny student resale hustle from her hostel floor. She sells used textbooks, calculators and lab gear to juniors.</p><div class="quote">“I don’t hate WhatsApp. I hate answering the same question 20 times after my post is buried.”</div><small>— Riya, 3rd-year student seller · fictional persona for the prototype</small></div>
+        <div class="pain-points"><div><span>01</span><b>Posts disappear</b><p>A great deal gets buried under memes and exam reminders.</p></div><div><span>02</span><b>Prices get lost</b><p>Buyers ask “how much?” even when the price was in yesterday’s message.</p></div><div><span>03</span><b>No buyer confidence</b><p>New students don't know who is genuine, active or reliable.</p></div></div>
+      </section>
+    </main>
+
+    <footer><div><span class="brand-mark">CS</span><b>CampusSwap</b></div><span>Built for campus commerce · Prototype</span><span>© 2026 CampusSwap</span></footer>
+  </div>
+
+  <div class="modal" id="sellModal" aria-hidden="true"><div class="modal-card"><button class="close" onclick="closeSellModal()">×</button><span class="eyebrow">LIST AN ITEM</span><h2>Turn your unused stuff into campus cash.</h2><form id="sellForm"><label>Item name<input id="newName" required placeholder="e.g. Engineering Mathematics book" /></label><div class="two-col"><label>Category<select id="newCategory"><option>Books</option><option>Gadgets</option><option>Hostel</option><option>Cycles</option></select></label><label>Price (₹)<input id="newPrice" type="number" min="1" required placeholder="500" /></label></div><label>Condition<select id="newCondition"><option>Like new</option><option>Good</option><option>Used</option></select></label><label>Short description<textarea id="newDescription" required placeholder="Mention condition, edition, accessories, etc."></textarea></label><button class="primary-btn big" type="submit">Publish listing →</button></form></div></div>
+
+  <div class="modal" id="chatModal" aria-hidden="true"><div class="chat-card"><div class="chat-head"><button class="close" onclick="closeChat()">×</button><div><span class="eyebrow">CAMPUS CHAT</span><h2 id="chatTitle">Chat</h2></div><span class="verified-pill">✓ Verified</span></div><div class="deal-bar"><span id="chatItem">Item</span><strong id="chatPrice">₹0</strong></div><div class="messages" id="messages"></div><div class="offer-row"><input id="offerInput" type="number" placeholder="Enter your offer (₹)" /><button id="offerBtn">Make offer</button></div><div class="message-row"><input id="messageInput" placeholder="Write a message..." /><button id="sendBtn">Send</button></div></div></div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
